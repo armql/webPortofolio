@@ -55,8 +55,9 @@ export default function EntryCard() {
     };
 
     return (
-        <div className='w-full h-full'>
-            <div className="w-100 h-100 mt-40 mx-0 md:mt-60 md:mx-60 p-10 rounded-sm bg-white bg-opacity-80 backdrop-blur-lg">
+        <div className='w-full h-full bg-white backdrop-blur-xl bg-opacity-20'>
+            {/* animated presence starts from this div */}
+            <div className="w-100 h-100 mt-40 mx-0 md:mt-60 md:mx-60 p-10 rounded-sm bg-white bg-opacity-60 backdrop-blur-lg">
                 <div className="grid grid-cols-1 lg:grid-cols-2 justify-between">
                     <div className="flex justify-center items-center">
                         <div className="grid grid-cols-1 items-center justify-center">
@@ -74,7 +75,7 @@ export default function EntryCard() {
                             <div className="text-center text-2xl uppercase">Developer</div>
                         </div>
                     </div>
-
+{/* to the end of here  */}
                     <div className="h-full w-full grid grid-cols-1 items-center justify-center">
                         <div className="gap-2">
                             <h1 className="text-6xl grid-cols-1 font-bold text-gradient-to-r from-green-200 to-blue-200">Hello!</h1>

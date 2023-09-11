@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import img from '../images/sm.jpg'
+import { useScroll, useTransform, motion } from 'framer-motion';
 export default function AboutMe() {
     const { scrollY } = useScroll();
     const scrollYProgress = useTransform(scrollY, [0, document.body.scrollHeight - window.innerHeight], [0, 1]);
@@ -76,10 +77,10 @@ export default function AboutMe() {
                     </div>
                     <div className='bg-emerald-950 backdrop-blur-lg bg-opacity-50 p-8 mt-8'>
                         <h2 className='font-bold text-3xl mb-4 text-lime-200'>
-                            Beam Me Up
+                            Looking for an annoying buddy?
                         </h2>
                         <p className='text-lime-50 text-lg'>
-                            If you want to chat or collaborate projects, drop me an email at <a className='underline' href='mailto:arlindmaliqi28@gmail.com'>arlindmaliqi28@gmail.com</a>. You can also stalk me (I mean, connect with me) on <Link className='underline' to='#'>LinkedIn</Link>. Thanks for visiting my little corner of the web.
+                            If you want to chat or collaborate projects, drop me an email at <a className='underline' href='mailto:arlindmaliqi28@gmail.com'>arlindmaliqi28@gmail.com</a>. You can also also talk to me on <Link className='underline' to='#'>LinkedIn</Link>. Thanks for visiting my little corner of the web.
                         </p>
                     </div>
                 </div>
