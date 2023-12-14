@@ -5,6 +5,7 @@ import {
   GuestLayout,
   Home,
   Projects,
+  About,
 } from "./routes/global/global";
 import { Suspense } from "react";
 
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<LazyLoader />}>
             <Projects />
+          </Suspense>
+        ),
+      },
+      {
+        path: "about",
+        element: (
+          <Suspense fallback={<LazyLoader />}>
+            <About />
           </Suspense>
         ),
       },
