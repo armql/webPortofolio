@@ -28,7 +28,6 @@ export default function Bar() {
           <NavLink
             key={link.to}
             to={link.to}
-            exact
             className={({ isActive }) =>
               `text-xs hover:cursor-pointer sm:text-base lg:text-base xl:text-lg ${
                 isActive ? "text-sky-400" : "hover:text-sky-400 "
