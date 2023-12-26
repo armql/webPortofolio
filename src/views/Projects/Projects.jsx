@@ -31,11 +31,12 @@ export default function Projects() {
   ];
   return (
     <Fragment>
-      <div className="relative mt-14 h-screen w-screen bg-gradient-to-b from-sky-50 to-sky-200 dark:from-blue-200 dark:to-sky-900">
+      <title>Portofolio | Projects</title>
+      <div className="relative mt-14 h-full w-screen bg-gradient-to-b from-sky-50 to-sky-200 dark:from-blue-200 dark:to-sky-900">
         <Header extraStyling={"text-center py-6 text-sky-950"}>
           Some good projects that i did alot of work into
         </Header>
-        <div className="grid h-full w-full gap-2 px-6 pb-12 pt-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-6 px-6 pb-12 pt-4 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {cardData.map((item) => (
             <ProjectCard
               key={item.title}
