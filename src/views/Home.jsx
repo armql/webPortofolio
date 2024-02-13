@@ -13,10 +13,10 @@ export default function Home() {
       <title>Welcome to my portfolio</title>
       <section
         ref={homeRef}
-        className="flex h-full w-full items-center justify-center bg-white px-2 sm:px-4 md:px-6 lg:px-12 xl:px-24"
+        className="flex h-full w-full items-center justify-center overflow-hidden bg-white px-2 sm:px-4 md:px-6 lg:px-12 xl:px-24"
       >
         <div className="relative flex h-full w-full flex-col items-center justify-center py-12">
-          <h1 className="text-wrap px-12  text-[82px] font-semibold tracking-tighter sm:text-[100px] md:text-[150px] lg:text-[200px] xl:text-[280px]">
+          <h1 className="text-wrap xs:text-[70px] px-12 text-[80px] font-semibold tracking-tighter sm:text-[100px] md:text-[150px] lg:text-[200px] xl:text-[280px]">
             Front end Developer
           </h1>
           <div className="flex w-full flex-row items-center justify-between">
