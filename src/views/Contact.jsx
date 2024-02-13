@@ -33,6 +33,7 @@ export default function Contact() {
     <TailwindCSSIcon />,
     <FigmaIcon />,
   ];
+
   return (
     <Fragment>
       <style>
