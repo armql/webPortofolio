@@ -1,5 +1,5 @@
 import { expertise_data } from "../assets/constants";
-import { useScroll } from "../contexts/ScrollContext";
+import { useScroll } from "../hooks/useScroll";
 
 export default function Expertise() {
   const { aboutRef } = useScroll();

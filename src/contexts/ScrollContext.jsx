@@ -1,7 +1,8 @@
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { createContext, useEffect, useMemo, useRef, useState } from "react";
+import { debounce } from "../utils/debounce";
+import PropTypes from "prop-types";
 
-const ScrollContext = createContext();
-export const useScroll = () => useContext(ScrollContext);
+export const ScrollContext = createContext();
 
 export const ScrollProvider = ({ children }) => {
   const [activeLink, setActiveLink] = useState("Home");
@@ -12,24 +13,15 @@ export const ScrollProvider = ({ children }) => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
 
-  const sectionRefs = {
-    Home: homeRef,
-    Projects: projectsRef,
-    About: aboutRef,
-    Contact: contactRef,
-  };
-
-  const debounce = (func, delay) => {
-    let timeoutId;
-    return function (...args) {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      timeoutId = setTimeout(() => {
-        func.apply(this, args);
-      }, delay);
-    };
-  };
+  const sectionRefs = useMemo(
+    () => ({
+      Home: homeRef,
+      Projects: projectsRef,
+      About: aboutRef,
+      Contact: contactRef,
+    }),
+    [homeRef, projectsRef, aboutRef, contactRef],
+  );
 
   useEffect(() => {
     const handleScroll = debounce(() => {
@@ -69,4 +61,8 @@ export const ScrollProvider = ({ children }) => {
       {children}
     </ScrollContext.Provider>
   );
+};
+
+ScrollProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

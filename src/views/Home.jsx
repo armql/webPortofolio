@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useScroll } from "../contexts/ScrollContext";
+import { useScroll } from "../hooks/useScroll";
 
 export default function Home() {
   const { homeRef } = useScroll();

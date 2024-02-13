@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
-import { useScroll } from "../contexts/ScrollContext";
+import { useEffect, useState } from "react";
+import { useScroll } from "../hooks/useScroll";
 import { project_data } from "../assets/constants";
-import { ThemeContext } from "../contexts/ThemeProvider";
 import { GithubIcon } from "../components/brands/icons";
+import { useTheme } from "../hooks/useTheme";
 
 export default function Projects() {
-  const { theme, handleTypeTheme } = useContext(ThemeContext);
+  const { theme, handleTypeTheme } = useTheme();
 
   const { projectsRef } = useScroll();
   const [active, setActive] = useState("");

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { link_data } from "../../assets/constants";
-import { useScroll } from "../../contexts/ScrollContext";
+import { useScroll } from "../../hooks/useScroll";
 
 export default function Navbar() {
   const { activeLink, setActiveLink, sectionRefs } = useScroll();
