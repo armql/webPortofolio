@@ -9,11 +9,10 @@ export default function Projects() {
 
   const { projectsRef } = useScroll();
   const [active, setActive] = useState("");
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // Track current image index
-  const [imagesLength, setImagesLength] = useState(0); // Track the length of images array
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imagesLength, setImagesLength] = useState(0);
 
   useEffect(() => {
-    console.log("Update imagesLength when active project changes");
     if (active !== "") {
       const project = project_data.find((data) => data.title === active);
       if (project && project.images) {

@@ -10,7 +10,7 @@ export default function Layout() {
   return (
     <Fragment>
       <Navbar />
-      <main className="relative">
+      <main className="relative overflow-hidden">
         <Home />
         <Projects />
         <Expertise />

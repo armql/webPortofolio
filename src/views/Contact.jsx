@@ -14,24 +14,24 @@ import {
 export default function Contact() {
   const { contactRef } = useScroll();
   const icons_data = [
-    <ReactIcon />,
-    <JavaScriptIcon />,
-    <JavaIcon />,
-    <PHPIcon />,
-    <NextJSIcon />,
-    <LaravelIcon />,
-    <MySQLIcon />,
-    <TailwindCSSIcon />,
-    <FigmaIcon />,
-    <ReactIcon />,
-    <JavaScriptIcon />,
-    <JavaIcon />,
-    <PHPIcon />,
-    <NextJSIcon />,
-    <LaravelIcon />,
-    <MySQLIcon />,
-    <TailwindCSSIcon />,
-    <FigmaIcon />,
+    { icon: <ReactIcon />, id: "react-icon-1" },
+    { icon: <JavaScriptIcon />, id: "javascript-icon-2" },
+    { icon: <JavaIcon />, id: "java-icon-3" },
+    { icon: <PHPIcon />, id: "php-icon-4" },
+    { icon: <NextJSIcon />, id: "nextjs-icon-5" },
+    { icon: <LaravelIcon />, id: "laravel-icon-6" },
+    { icon: <MySQLIcon />, id: "mysql-icon-7" },
+    { icon: <TailwindCSSIcon />, id: "tailwindcss-icon-8" },
+    { icon: <FigmaIcon />, id: "figma-icon-9" },
+    { icon: <ReactIcon />, id: "react-icon-10" },
+    { icon: <JavaScriptIcon />, id: "javascript-icon-11" },
+    { icon: <JavaIcon />, id: "java-icon-12" },
+    { icon: <PHPIcon />, id: "php-icon-13" },
+    { icon: <NextJSIcon />, id: "nextjs-icon-14" },
+    { icon: <LaravelIcon />, id: "laravel-icon-15" },
+    { icon: <MySQLIcon />, id: "mysql-icon-16" },
+    { icon: <TailwindCSSIcon />, id: "tailwindcss-icon-17" },
+    { icon: <FigmaIcon />, id: "figma-icon-18" },
   ];
 
   return (
@@ -53,8 +53,8 @@ export default function Contact() {
         <ul
           className={`carousel w-full items-center justify-evenly gap-24 py-8 font-normal tracking-wide sm:gap-28 md:gap-32 lg:gap-48 xl:gap-64`}
         >
-          {icons_data.map((icon, index) => (
-            <li key={index}>{icon}</li>
+          {icons_data.map(({ icon, id }) => (
+            <li key={id}>{icon}</li>
           ))}
         </ul>
       </h1>
