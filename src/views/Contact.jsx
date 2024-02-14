@@ -34,6 +34,10 @@ export default function Contact() {
     { icon: <FigmaIcon />, id: "figma-icon-18" },
   ];
 
+  function mail() {
+    window.open("mailto:arlindmaliqi28@gmail.com");
+  }
+
   return (
     <Fragment>
       <style>
@@ -64,6 +68,7 @@ export default function Contact() {
           <div>
             <button
               type="button"
+              onClick={mail}
               className="group relative z-10 w-full overflow-hidden rounded-full border-2 border-black px-4 py-3 font-mono text-sm tracking-wide text-black transition duration-500 ease-in-out hover:text-white xl:px-6 xl:py-4"
             >
               arlindmaliqi28@gmail.com
