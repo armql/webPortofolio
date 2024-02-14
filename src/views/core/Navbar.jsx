@@ -39,7 +39,7 @@ export default function Navbar() {
       ref={navRef}
     >
       <div className="relative h-[50px] w-[500px] overflow-hidden rounded-full bg-black">
-        <ul className="relative flex h-full w-full flex-row items-center justify-center gap-1 px-1.5 py-1.5">
+        <div className="relative flex h-full w-full flex-row items-center justify-center gap-1 px-1.5 py-1.5">
           {link_data.map((link) => (
             <button
               type="button"
@@ -63,7 +63,7 @@ export default function Navbar() {
             className="absolute rounded-full bg-white py-5 transition-all duration-300"
             style={highlightStyle}
           ></div>
-        </ul>
+        </div>
       </div>
     </nav>
   );
