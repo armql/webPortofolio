@@ -35,10 +35,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed left-0 right-0 top-0 z-20 flex items-center justify-center p-4"
+      className="fixed left-0 right-0 top-0 z-30 flex items-center justify-center p-4"
       ref={navRef}
     >
-      <div className="relative h-[50px] w-[500px] overflow-hidden rounded-full bg-black">
+      <div className="relative z-40 h-[50px] w-[500px] overflow-hidden rounded-full bg-black">
         <div className="relative flex h-full w-full flex-row items-center justify-center gap-1 px-1.5 py-1.5">
           {link_data.map((link) => (
             <button

@@ -48,7 +48,7 @@ export default function Projects() {
             ...prev,
             index: (prev.index + 1) % prev.length,
           }));
-        }, 3100);
+        }, 3000);
 
         return () => {
           clearInterval(interval);
@@ -56,8 +56,6 @@ export default function Projects() {
       }
     }
   }, [state.identifier]);
-
-  console.log(state);
 
   return (
     <section
@@ -107,7 +105,7 @@ export default function Projects() {
                     className={`absolute bottom-0 left-0 right-0 top-0 z-10 w-full ${project_theme[theme].loader_color}`}
                     style={{ height: `${progress}%` }}
                   />
-                  <div className="absolute bottom-0 left-0 right-0 top-0 z-10 flex items-end justify-end  bg-black bg-opacity-10 p-4 delay-500">
+                  <div className="absolute bottom-0 left-0 right-0 top-0 z-20 flex items-end justify-end  bg-black bg-opacity-10 p-4 delay-500">
                     <a
                       href={data.repo}
                       className="group flex flex-row items-center gap-1 rounded-full bg-white p-2 font-semibold text-black transition hover:bg-zinc-100 active:bg-zinc-200"
